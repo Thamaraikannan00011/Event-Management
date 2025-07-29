@@ -14,7 +14,7 @@ public class GlobalExceptionHandler {
 	public ResponseEntity<ResponseStructure<String>> handleNoObjectPassed(NoObjectPassedException ex){
 		ResponseStructure<String> res = new ResponseStructure<String>();
 		res.setStatus(HttpStatus.UNPROCESSABLE_ENTITY.value());
-		res.setMessage("missing argument");
+		res.setMessage("failure");
 		res.setData(ex.getMessage());
 		return new ResponseEntity<ResponseStructure<String>>(res, HttpStatus.UNPROCESSABLE_ENTITY);
 	}
@@ -37,8 +37,8 @@ public class GlobalExceptionHandler {
 		return new ResponseEntity<ResponseStructure<String>>(res, HttpStatus.NOT_FOUND);
 	}
 	
-	@ExceptionHandler(UpdateNotValid.class)
-	public ResponseEntity<ResponseStructure<String>> handleUpdateValidation(UpdateNotValid ex){
+	@ExceptionHandler(UpdateNotValidException.class)
+	public ResponseEntity<ResponseStructure<String>> handleUpdateValidation(UpdateNotValidException ex){
 		ResponseStructure<String> res = new ResponseStructure<String>();
 		res.setStatus(HttpStatus.NOT_ACCEPTABLE.value());
 		res.setMessage("failure");
