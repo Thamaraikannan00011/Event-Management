@@ -11,9 +11,9 @@ import jsp.springproject.entity.Venue;
 
 @Repository
 public interface VenueRepository extends JpaRepository<Venue, Integer>{
-	@Query(value = "SELECT v.event FROM Venue v WHERE e.id = ?1")
-	public List<Event> findEventByVenueId(int id);
-	
-	@Query(value = "SELECT v FROM Venue v WHERE v.location = ?1")
-	public List<Venue> findVenueByLocation(String location);
+//	@Query("SELECT v.event FROM Venue v WHERE e.id = ?1")
+//	List<Event> findEventByVenueId(int id);
+//	
+//	@Query("SELECT v FROM Venue v WHERE v.location = ?1")
+//	List<Venue> findVenueByLocation(String location);
 }
