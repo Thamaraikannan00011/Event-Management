@@ -74,7 +74,7 @@ public class AttendeeService {
 			return new ResponseEntity<ResponseStructure<Attendee>>(res, HttpStatus.OK);
 		}
 		else {
-			throw new UpdateNotValid("No record match to update");
+			throw new UpdateNotValidException("No record match to update");
 		}
 	}
 	

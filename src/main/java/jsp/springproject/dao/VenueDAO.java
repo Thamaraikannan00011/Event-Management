@@ -9,7 +9,6 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Repository;
 
-import jsp.springproject.entity.Event;
 import jsp.springproject.entity.Venue;
 import jsp.springproject.repository.VenueRepository;
 
