@@ -39,13 +39,13 @@ public class VenueDAO {
 		repository.deleteById(id);
 	}
 	
-	public List<Event> getEventsByVenueId(int id){
-		return repository.findEventByVenueId(id);
-	}
-	
-	public List<Venue> getVenueByLocation(String location){
-		return repository.findVenueByLocation(location);
-	}
+//	public List<Event> getEventsByVenueId(int id){
+//		return repository.findEventByVenueId(id);
+//	}
+//	
+//	public List<Venue> getVenueByLocation(String location){
+//		return repository.findVenueByLocation(location);
+//	}
 	
 	public Page<Venue> getVenueByPaginationAndSorting(int pageNumber, int pageSize, String field){
 		return repository.findAll(PageRequest.of(pageNumber, pageSize, Sort.by(field).ascending()));

@@ -30,6 +30,10 @@ public class AttendeeDAO {
 		return repository.findById(id);
 	}
 	
+	public Optional<Attendee> updateValidation(String email){
+		return repository.updateValidation(email);
+	}
+	
 	public Attendee updateAttendee(Attendee attendee) {
 		return repository.save(attendee);
 	}
